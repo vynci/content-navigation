@@ -1,0 +1,14 @@
+{
+  "name": "marionette-middleware-router",
+  "homepage": "https://github.com/fozzylyon/marionette-middleware-router",
+  "version": "0.1.0",
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "36cc5feffdc75bcb49da1f89806fc689cf3b5773"
+  },
+  "_source": "git@github.com:fozzylyon/marionette-middleware-router.git",
+  "_target": "0.1.0",
+  "_originalSource": "git@github.com:fozzylyon/marionette-middleware-router.git"
+}
