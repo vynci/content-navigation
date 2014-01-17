@@ -3,35 +3,41 @@
 	programId: 101, 
 	subProgramId: 1011
 	title: 'Assessment for Learning (Segment 1)',
-	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+	segmentImg: 'http://builtbyhq.com/projects/respond/2/img/video-bg-2.png'
 }, {
 	id: 10102
 	programId: 101, 
 	subProgramId: 1011
 	title: 'Assessment for Learning (Segment 2)',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+	segmentImg: 'http://builtbyhq.com/projects/respond/2/img/video-bg-2.png'
 }, {
 	id: 10103
 	programId: 101, 
 	subProgramId: 1011
 	title: 'Assessment for Learning (Segment 3)',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+	segmentImg: 'http://builtbyhq.com/projects/respond/2/img/video-bg-2.png'
 }, {
 	id: 10104
 	programId: 101, 
 	subProgramId: 1011
 	title: 'Assessment for Learning (Segment 4)',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+	segmentImg: 'http://builtbyhq.com/projects/respond/2/img/video-bg-2.png'
 }, {
 	id: 10105
 	programId: 101, 
 	subProgramId: 1011
 	title: 'Assessment for Learning (Segment 5)',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+	segmentImg: 'http://builtbyhq.com/projects/respond/2/img/video-bg-2.png'
 }, {
 	id: 10106
 	programId: 101, 
 	subProgramId: 1011
 	title: 'Assessment for Learning (Segment 6)',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+	segmentImg: 'http://builtbyhq.com/projects/respond/2/img/video-bg-2.png'
 }]

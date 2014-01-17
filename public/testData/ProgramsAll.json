@@ -3,55 +3,65 @@
 	title: 'Assessment for Learning',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
 	subPrograms: 2,
-	segments: 12
+	segments: 12,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }, {
 	id: 102,
 	title: 'Autism Pro',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-	segments: 8
+	segments: 8,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }, {
 	id: 103,
 	title: 'Cognitive Coaching',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-	segments: 4
+	segments: 4,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }, {
 	id: 104,
 	title: 'Concious Classroom Management',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
 	subPrograms: 2,
-	segments: 7
+	segments: 7,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }, {
 	id: 105,
 	title: 'Dealing with Teachers who are Resistant to Change',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
 	subPrograms: 2,
-	segments: 6
+	segments: 6,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }, {
 	id: 106,
 	title: 'Differentiated Instruction Applied',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
 	subPrograms: 2,
-	segments: 3
+	segments: 3,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }, {
 	id: 107,
 	title: 'Early Childhood Development',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
 	subPrograms: 2,
-	segments: 10
+	segments: 10,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }, {
 	id: 108,
 	title: 'Every Teacher - A Teacher ',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
 	subPrograms: 2,
-	segments: 8
+	segments: 8,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }, {
 	id: 109,
 	title: 'Helping Strugling Readers Beyond Grade One',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-	segments: 1
+	segments: 1,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }, {
 	id: 110,
 	title: 'Instructional Coaching',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-	segments: 10
+	segments: 10,
+	programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 }]
