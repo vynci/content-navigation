@@ -11,11 +11,6 @@ define( function( require ) {
 	var programModel = new Program();
 	var programView  = new ProgramView();
 
-	describe( 'testing Program Test', function () {
-		it( 'this test', function() {
-			this.should.be.ok;
-		} );
-	} );
 	describe( 'Program model test', function () {
 		it( 'getting program model file', function () {
 			programModel.should.be.ok;

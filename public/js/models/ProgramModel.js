@@ -6,11 +6,12 @@ define( function ( require ) {
 
 	var ProgramModel = Backbone.Model.extend({
 		defaults : {
-			id : 101,
-			title : 'Program title',
+			id 			: 101,
+			title 		: 'Program title',
 			description : 'Program description',
 			subPrograms : 1,
-			segments : 	1
+			segments 	: 1,
+			programImg 	: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
 		}
 	} );
 

@@ -3,10 +3,11 @@ define( function ( require ) {
 	var _           = require( 'underscore' );
 	var Backbone    = require( 'backbone' );
 	var Marionette  = require( 'marionette' );
-	var model 		= require('models/ProgramModel')
+	var model 		= require( 'models/ProgramModel')
 
 	var collection = Backbone.Collection.extend({
-		model : model		
+		model : model,
+		url : 	'/public/testData/ProgramsAll.json'
 	} );
 	return collection;
 } );
