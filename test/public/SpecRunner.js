@@ -8,6 +8,7 @@
 		'paths' : {
 			// lives in the test directory
 			'spec'                     : '../../test/public/spec',
+			'testData'				   : '../../testData',
 
 			// Test libs
 			'mocha'                    : '../../public/js/libs/mocha/mocha',
