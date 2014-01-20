@@ -1,0 +1,31 @@
+{
+  "name": "platform-connect",
+  "version": "0.1.0",
+  "homepage": "git://github.com/School-Improvement-Network/platform-connect.git",
+  "authors": [
+    "James Lyon <fozzylyon@gmail.com>"
+  ],
+  "description": "SDK to connect to the platform from a resource app",
+  "main": "platform-connect.js",
+  "keywords": [
+    "sdk",
+    "connect",
+    "resource-app",
+    "resource",
+    "app",
+    "javascript"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~2.2.1",
+    "requirejs": "~2.1.9",
+    "jquery": "1.10.2"
+  }
+}

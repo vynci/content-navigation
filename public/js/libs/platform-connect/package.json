@@ -1,0 +1,31 @@
+{
+  "name": "platform-connect",
+  "version": "0.1.0",
+  "description": "SDK to connect to the platform from a resource app",
+  "main": "platform-connect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/School-Improvement-Network/platform-connect.git"
+  },
+  "keywords": [
+    "sdk",
+    "connect",
+    "resource-app",
+    "resource",
+    "app",
+    "javascript"
+  ],
+  "author": "James Lyon",
+  "bugs": {
+    "url": "https://github.com/School-Improvement-Network/platform-connect/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.5",
+    "almond": "~0.2.6"
+  }
+}

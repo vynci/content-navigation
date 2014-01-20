@@ -1,0 +1,32 @@
+{
+  "name": "porthole",
+  "version": "0.1.0",
+  "homepage": "git://github.com/School-Improvement-Network/porthole.git",
+  "authors": [
+    "James Lyon <fozzylyon@gmail.com>"
+  ],
+  "description": "Porthole is a small library for secure cross-domain iFrame communication.",
+  "main": "porthole.js",
+  "keywords": [
+    "sdk",
+    "connect",
+    "resource-app",
+    "resource",
+    "app",
+    "javascript"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~2.2.1",
+    "requirejs": "~2.1.9",
+    "jquery": "1.10.2",
+    "json3": "~3.2.5"
+  }
+}
