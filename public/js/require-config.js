@@ -7,7 +7,7 @@ require.config( {
 		// Libraries and utility scripts
 		'jquery'                   : 'libs/jquery/jquery',
 		'bootstrap'                : 'libs/bootstrap/docs/assets/js/bootstrap',
-		'underscore'               : 'libs/lodash/dist/lodash',
+		'underscore'               : 'libs/lodash/lodash',
 		'backbone'                 : 'libs/backbone-amd/backbone',
 		'marionette'               : 'libs/backbone.marionette/lib/core/amd/backbone.marionette',
 		'backbone.babysitter'      : 'libs/backbone.babysitter/lib/amd/backbone.babysitter',
