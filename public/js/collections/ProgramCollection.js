@@ -7,7 +7,7 @@ define( function ( require ) {
 
 	var collection = Backbone.Collection.extend({
 		model : model,
-		url : 	'/public/testData/ProgramsAll.json'
+		url : 'testData/ProgramsAll.json'
 	} );
 	return collection;
 } );

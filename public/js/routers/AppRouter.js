@@ -7,7 +7,8 @@ define( function ( require ) {
 	return Marionette.MiddlewareRouter.extend( {
 
 		'appRoutes' : {
-			'*actions' : 'showDefault'
+			'*actions' : 'showDefault',
+			'library/:filter/:sort/:content': 'showContents'
 		}
 
 	} );

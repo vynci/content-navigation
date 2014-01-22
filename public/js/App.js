@@ -21,22 +21,30 @@ define( function ( require ) {
 
 	// The regions for the application
 	App.addRegions( {
-		'content'     : '#main-content',
+		'topRegion'		: '#top-region',
+		'leftRegion'	: '#left-region',
+		'centerRegion'	: '#center-region',
+		'bottomRegion'	: '#bottom-region'
 	} );
 
 	App.addInitializer( function ( options ) {
 
 		// Controller init
 		App.Controller = new Controller( {
+			// 'token'   : options.access_token,
 			'App'     : App,
 			'regions' : {
-				'content'     : App.content
+				'topRegion'		: App.topRegion,
+				'leftRegion'	: App.leftRegion,
+				'centerRegion'	: App.centerRegion,
+				'bottomRegion'	: App.bottomRegion
 			},
 			'Communicator' : Communicator
 		} );
 
 		// Router init
 		App.Router = new Router( { 'controller' : App.Controller } );
+		console.log(App);
 	} );
 
 	// start history
