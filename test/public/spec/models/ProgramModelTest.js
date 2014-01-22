@@ -6,7 +6,7 @@ define( function( require ) {
 	var Marionette = require( 'marionette' );
 	var async      = require( 'async' );
 	var Program	   = require( 'models/ProgramModel' );
-	var ProgramView = require( 'views/ProgramItemView');
+	var ProgramView = require( 'views/Programs/ProgramItemView');
 
 	var programModel = new Program();
 	var programView  = new ProgramView();
@@ -39,8 +39,7 @@ define( function( require ) {
 		} );
 		it( 'model view', function () {
 			programView = new ProgramView( newProgramModel );
-			programView.el.nodeName.should.be.eql( 'LI' );
-			programView.attributes.should.include.keys( 'id', 'title', 'description', 'subPrograms', 'segments' );
+			programView.attributes.should.include.keys( 'id', 'title', 'description', 'subPrograms', 'segments', 'programImg' );
 		} );
 	} );
 } );

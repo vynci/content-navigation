@@ -6,7 +6,8 @@ define( function () {
 		'specs' : [ //'spec/controllers/AppControllerTest',
 		'spec/models/AppSegmentModelTest',
 		'spec/models/ProgramModelTest',
-		'spec/collections/ProgramCollectionTest'
+		'spec/collections/ProgramCollectionTest',
+		'spec/views/Programs/ProgramCollectionViewTest'
 		 ]
 	};
 } );
