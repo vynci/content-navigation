@@ -7,7 +7,7 @@ define( function ( require ) {
 	var template   = require( 'text!templates/Programs/ProgramItemView.html' );
 
 	return Marionette.ItemView.extend( {
-		'template'  : _.template( template ),
-		'className'	: 'program-item'
+		tagName: 'li',
+		'template'  : _.template( template )
 	} );
 } );

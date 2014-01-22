@@ -4,11 +4,10 @@ define( function ( require ) {
 	var _          = require( 'underscore' );
 	var Marionette = require( 'marionette' );
 
-	var template   = require( 'text!templates/Grid/GridLayoutView.html' );
-
 	var programItemView = require('views/Programs/ProgramItemView');
 
 	return Marionette.CollectionView.extend( {
+		tagName: 'ul',
 		itemView 	: programItemView
 	} );
 } );
