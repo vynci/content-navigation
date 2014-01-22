@@ -13,22 +13,72 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<script src="js/libs/json2.js"></script>
 		<![endif]-->
+		<style>
+		/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	height: 55px;
+	border-bottom: 1px solid #ccc;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle {
+	width: 100%;
+	position: relative;	
+}
+.middle:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+.container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+#center-region {
+	padding: 0 0 0 270px;
+}
+
+
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+#left-region {
+	float: left;
+	width: 250px;
+	margin-left: -100%;
+	position: relative;
+	border-right: 1px solid #ccc;
+	min-height: 300px;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	height: 100px;
+}
+		</style>
 	</head>
 
 	<body>
 
-		<div id="main-content" class="cn-content">
-			<div class="cn-container">
-				<div class="cn-header-content"> 
-					<h1> header content</h1>
+		<div id="main-layout" class="container">
+			<div class="header">
+				<div id="top-region"></div>
+			</div>
+			<div class="middle">
+				<div class="container">
+					<div id="center-region"></div>
 				</div>
-				<div class="cn-sidebar-content pull-left"> 
-					<h1> filter here </h1>
-				</div>
-				<div class="cn-main-content pull-right"> 
-					<h1>  main content-here <h2>
-				</div>
-			</div>	
+				<div id="left-region"></div>				
+			</div>
+			<div class="footer">
+				<div id="bottom-region"></div>
+			</div>
+
 		</div>
 
 		<script src="js/libs/es5-shim/es5-shim.min.js"></script>
@@ -38,3 +88,4 @@
 
 	</body>
 </html>
+
