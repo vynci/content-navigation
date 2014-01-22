@@ -3,11 +3,12 @@ define( function () {
 
 	/* return an array of specs to be run */
 	return {
-		'specs' : [ //'spec/controllers/AppControllerTest',
-		'spec/models/AppSegmentModelTest',
-		'spec/models/ProgramModelTest',
-		'spec/collections/ProgramCollectionTest',
-		'spec/views/Programs/ProgramCollectionViewTest'
+		'specs' : [ 
+			'spec/controllers/AppControllerTest',
+			'spec/models/SegmentModelTest',
+			'spec/models/ProgramModelTest',
+			'spec/collections/ProgramCollectionTest',
+			'spec/views/Programs/ProgramCollectionViewTest'
 		 ]
 	};
 } );
