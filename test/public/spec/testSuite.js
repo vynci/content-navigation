@@ -5,6 +5,7 @@ define( function () {
 	return {
 		'specs' : [ 
 			'spec/controllers/AppControllerTest',
+			'spec/controllers/ProgramsControllerTest',
 			'spec/models/SegmentModelTest',
 			'spec/models/ProgramModelTest',
 			'spec/collections/ProgramCollectionTest',

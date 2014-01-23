@@ -1,7 +1,8 @@
 @platform-gray: #E1E1E1;
 @platform-blue: #1BB7E9;
 @platform-green: #79CE57;
-@platform-charcoal: #333;
+@platform-charcoal: #333333;
+@platform-white: #ffffff;
 @plaform-padding: 9px;
 @platform-font:'Avenir LT W01 65 Medium', 'AvenirLTW01-65MediumObl', 'Avenir LT W01 85 Heavy', 'AvenirLTW01-85HeavyObli', 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
 @platform-boxshadow: 1px 1px rgba(32, 37, 35, .2);
@@ -131,6 +132,49 @@
             width:276px;
             height: 300px;
             float:left;
+
+            .cn-program-content { 
+                position: relative;
+                background: @platform-charcoal;
+
+                a.cn-playnow-icon{
+                    display:none;
+                    position:absolute; 
+                    top: 60px;
+                    left: 130px;
+                    font-size: 36px; 
+                    text-decoration: none; 
+                    color: @platform-white;             
+                }
+
+                p{
+                    display:none;
+                    position:absolute; 
+                    top: 100px;
+                    left: 105px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: @platform-white;
+ 
+                }
+            }
+
+            .cn-program-content:hover {
+
+                a.cn-playnow-icon {
+                    display: block;
+                }
+
+                p{
+                    display: block;
+                }     
+
+                img{
+                    opacity: 0.5;
+                    transition-duration: 0.5s;
+                }       
+            }   
+
             .cn-program-details {
                 padding:15px 10px 24px 15px;
                 h3 {
