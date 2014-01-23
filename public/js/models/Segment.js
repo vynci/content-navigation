@@ -6,11 +6,30 @@ define( function ( require ) {
 
 	var SegmentModel = Backbone.Model.extend({
 		defaults : {
-			id : 101,
-			programId : 101,
-			subProgramId : 1011,
-			title : 'Segment Title',
-			description : 'Segment description'
+			ContentId 			: 10101,
+			ContentParentId 	: 1011,
+			ContentName			: 'Content Name',
+			ContentDescription	: 'Content Description',
+			ContentTypeId		: 0,
+			PresentationOrder	: 0,
+			SegmentLengthInSeconds : 0,
+			SKU					: '',
+			FileName 			: '',
+			ImageURL			: 'http://builtbyhq.com/projects/respond/2/img/video-bg-2.png',
+			GuidebookFileName	: '',
+			AudioFileName		: '',
+			TranscriptFileName	: '',
+			PreviewVideoName	: '',
+			Created				: 0,
+			Creator				: 0,
+			Modified			: 0,
+			Modifier			: 0,
+			Removed				: 0,
+			Remover				: 0,
+			SearchData			: '',
+			EditionName			: '',
+			ProgramName			: '',
+			Children			: []
 		}
 	} );
 

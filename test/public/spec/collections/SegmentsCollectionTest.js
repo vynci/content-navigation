@@ -5,13 +5,13 @@ define( function ( require ) {
 	var Backbone   = require( 'backbone' );
 	var Marionette = require( 'marionette' );
 	var async      = require( 'async' );
-	var Collection = require( 'collections/ProgramCollection' );
+	var Collection = require( 'collections/SegmentsCollection');
 
-	var programsCollection = new Collection();
+	var segmentsCollection = new Collection();
 
-	describe( 'program collection', function () {
+	describe( 'Segments collection', function () {
 		it( 'should be an instance', function () {
-			programsCollection.should.be.an.instanceof( Collection );
+			segmentsCollection.should.be.an.instanceof( Collection );
 		} );
   	} );
 } );
