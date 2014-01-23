@@ -4,7 +4,7 @@ define( function ( require ) {
 	var _          = require( 'underscore' );
 	var Marionette = require( 'marionette' );
 
-	var template   = require( 'text!templates/Filters/FilterCollectionView.html' );
+	var template   = require( 'text!templates/Filters/FiltersCollectionView.html' );
 
 	var filterItemView = require('views/Filters/FilterItemView');
 
