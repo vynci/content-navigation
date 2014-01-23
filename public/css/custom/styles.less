@@ -1,11 +1,12 @@
 @platform-gray: #E1E1E1;
- @platform-blue: #1BB7E9;
- @platform-green: #79CE57;
- @platform-charcoal: #333;
- @plaform-padding: 9px;
- @platform-font:'Avenir LT W01 65 Medium', 'AvenirLTW01-65MediumObl', 'Avenir LT W01 85 Heavy', 'AvenirLTW01-85HeavyObli', 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
- @platform-boxshadow: 1px 1px rgba(32, 37, 35, .2);
- .default-li(@mp: 0px) {
+@platform-blue: #1BB7E9;
+@platform-green: #79CE57;
+@platform-charcoal: #333;
+@plaform-padding: 9px;
+@platform-font:'Avenir LT W01 65 Medium', 'AvenirLTW01-65MediumObl', 'Avenir LT W01 85 Heavy', 'AvenirLTW01-85HeavyObli', 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
+@platform-boxshadow: 1px 1px rgba(32, 37, 35, .2);
+
+.default-li(@mp: 0px) {
     padding: @mp;
     margin:@mp;
     list-style:none;
@@ -15,9 +16,26 @@
     -moz-border-radius: @radius;
     -webkit-border-radius: @radius;
 }
-.margin-breaker {
+
+.multiple-boxshadow(){ /*temporary*/
+    -moz-box-shadow: 
+        4px 6px 3px 0px #333, 
+        10px 13px 3px 1px #666,
+        16px 20px 3px 2px #999;
+    -webkit-box-shadow: 
+        4px 6px 3px 0px #333, 
+        10px 13px 3px 1px #666,
+        16px 20px 3px 2px #999;
+    box-shadow: 
+        4px 6px 3px 0px #333, 
+        10px 13px 3px 1px #666,
+        16px 20px 3px 2px #999;
+}
+
+.cn-margin-breaker{
     margin-top:20px;
 }
+
 .cn-content {
     max-width: 1200px !important;
     /*temporary use only*/
@@ -33,8 +51,7 @@
     }
 }
 .cn-sidebar-content {
-    width: 276px;
-    /* temporary */
+    width: 276px;   /* temporary */
     margin-right:32px;
     .cn-filter {
         .cn-header-filter {
@@ -95,18 +112,20 @@
         }
     }
 }
+
+
 .cn-main-content {
-    width:630px;
-    /*temporary*/
+    width:630px; /* temporary */
     ul {
         .default-li(0px);
         overflow:auto;
         li {
             .default-li(0px);
             .border-radius(@radius: 5px);
-            -webkit-box-shadow: @platform-boxshadow;
+            .multiple-boxshadow();
+            /*-webkit-box-shadow: @platform-boxshadow;
             -moz-box-shadow: @platform-boxshadow;
-            box-shadow: @platform-boxshadow;
+            box-shadow: @platform-boxshadow;*/
             background-color: #f7f8f9;
             margin:0px 32px 32px 0px !important;
             width:276px;
@@ -130,4 +149,5 @@
             }
         }
     }
+
 }
