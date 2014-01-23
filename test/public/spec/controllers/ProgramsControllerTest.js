@@ -6,41 +6,46 @@ define( function ( require ) {
 	var Backbone   = require( 'backbone' );
 	var Marionette = require( 'marionette' );
 	var async      = require( 'async' );
-	var _ 		   = require( 'underscore');
 
 	var Controller   = require( 'controllers/ProgramsController' );
-	var Collection = require( 'collections/ProgramCollection' );
-	var template   = require( 'text!templates/Grid/GridLayoutView.html' );
+	var Communicator = require( 'Communicator' );
 
-	describe( 'Programs Controller', function () {	
-		var controller = new Controller();
-		var collection = new Collection();
+	describe( 'ProgramsController Test', function () {
+		var controller;
+		var contentRegion = new Marionette.Region( { 'el' : $( '#center-region' ) } );
 
-		it( 'should be an instance', function () {
-			controller.should.be.an.instanceof( Controller );
-		} );
-		it( 'should have functions', function () {
-			controller.show.should.be.a.function;
-			controller.initialize.should.be.a.function;
-			controller.fetchCollection.should.be.a.function;
-		} );
-		it( 'show region', function ( done ) {
-			var region = new Marionette.Layout.extend( {
-				'template'  : _.template( template ), 
-				regions:{ mainRegion : '#grid-content' }	
+		// router spy for this.App.Router.navigate() assertions
+		var navigateURL = '';
+		var router = {
+			'navigate' : function ( url ) {
+				navigateURL = url;
+			}
+		};
+
+		var createController = function () {
+			controller = new Controller( {
+				'App'     : {
+					'Router' : router
+				},
+				'regions' : {
+					'content' : contentRegion
+				},
+				'Communicator' : Communicator
 			} );
+		};
+		var destroyController = function () {
+			contentRegion.reset();
+			controller.stopListening();
+			controller = undefined;
+			Backbone.history.navigate( '' );
+			navigateURL = '';
+		};
 
-			var showRegion = controller.show( region , Collection );
-			showRegion.should.be.an.instance;
+		describe( 'show()', function () {
+			before( createController );
+			after( destroyController );
 
-			collection.fetch( { 
-				success: function( col, res, opt ) {
-					col.length.should.be.above(0);
-					done();
-				}
-			} );
 		} );
 	} );
 
 } );
- 
