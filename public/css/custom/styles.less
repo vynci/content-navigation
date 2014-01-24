@@ -120,8 +120,9 @@
             margin:0px 32px 32px 0px !important;
             width:276px;
             height: 300px;
+            overflow:hidden;
             float:left;
-            .cn-program-content {
+            .cn-program-content, .cn-segment-content {
                 position: relative;
                 background: @platform-charcoal;
                 a.cn-playnow-icon {
@@ -143,7 +144,7 @@
                     color: @platform-white;
                 }
             }
-            .cn-program-content:hover {
+            .cn-program-content:hover, .cn-segment-content:hover {
                 a.cn-playnow-icon {
                     display: block;
                 }
@@ -155,7 +156,7 @@
                     transition-duration: 0.5s;
                 }
             }
-            .cn-program-details {
+            .cn-program-details, .cn-segment-details {
                 padding:15px 10px 24px 15px;
                 h3 {
                     font-size: 16px;
@@ -172,7 +173,7 @@
                 }
                 .cn-watchlater-icon {
                     float: right;
-                    margin-right: 15px;
+                    margin-right: 30px;
                     font-size: 25px;
                     text-decoration: none;
                     color: @platform-gray;
@@ -210,7 +211,7 @@
     text-align: center;
     opacity: 0;
     z-index: 999;
-    padding: 3px 8px;
+    padding: 8px 5px;
     position: absolute;
     cursor: default;
     -webkit-transition: all 240ms ease-in-out;
