@@ -6,7 +6,7 @@ define( function ( require ) {
 	var $           = require( 'jquery' );
 	var Backbone    = require( 'backbone' );
 	var Marionette  = require( 'marionette' );
-	var async  		= require( 'async' );	
+	var async  		= require( 'async' );
 
 	var applications = {};
 	var collections  = {};
@@ -14,7 +14,7 @@ define( function ( require ) {
 	var layouts      = {};
 	var models       = {};
 	var views        = {
-		'ErrorView' : require( 'views/ErrorView' ), 
+		'ErrorView' : require( 'views/ErrorView' ),
 		'GridContent'	: null
 	};
 
@@ -43,36 +43,36 @@ define( function ( require ) {
 		showFilters: function (callback) {
 			require(['controllers/FiltersController'], function(FiltersController) {
 				_.bindAll(that);
-				
+
 				subControllers.Filters = new FiltersController();
 
 			   	subControllers.Filters.show(App.leftRegion);
 
 			   	callback(null);
 			});
-		}, 
+		},
 
 		showGrid: function (callback) {
 			require(['controllers/GridController'], function(GridController) {
 				_.bindAll(that);
-				
+
 				subControllers.Grid = new GridController();
 
 			   	views.GridContent = subControllers.Grid.show(App.centerRegion);
 
 			   	callback(null);
 			});
-		}, 
+		},
 
 		showContents: function () {
 			require(['controllers/ProgramsController', 'controllers/SegmentsController'], function(ProgramsController, SegmentsController) {
 				_.bindAll(that);
-				
+
 				subControllers.Programs = new ProgramsController();
 				subControllers.Segments = new SegmentsController();
 				console.log(views.GridContent)
 			   	subControllers.Programs.show( views.GridContent.mainRegion );
-
+			    //subControllers.Segments.show( views.GridContent.mainRegion );
 			});
 		}
 	};
@@ -98,9 +98,9 @@ define( function ( require ) {
 
 			if (!App.subControllers) {
 				async.series([
-					API.showHeader, 
+					API.showHeader,
 					API.showFilters,
-					API.showGrid	
+					API.showGrid
 				], API.showContents);
 
 				App.subControllers = subControllers;
@@ -109,15 +109,15 @@ define( function ( require ) {
 				API.showContents( actions );
 			}
 
-			
-			
+
+
 		},
 
 		// Views builder
 		'showContents': function ( filter, sort, content ) {
 			console.log('contents')
 			// Views builder
-		}, 
+		},
 
 		// ## Region management methods
 

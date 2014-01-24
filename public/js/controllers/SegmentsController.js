@@ -9,17 +9,22 @@ define( function ( require ) {
 	var App  = require( 'App' );
 
 	var applications = {};
-	var collections  = {};
+	var collections  = {
+		'SegmentsCollection'	: require('collections/SegmentsCollection')
+	};
 	var components   = {};
 	var layouts      = {};
 	var models       = {};
 	var views        = {
-		'ErrorView' : require( 'views/ErrorView' )
+		'ErrorView' : require( 'views/ErrorView' ),
+		'SegmentsCollection'	: require('views/Segments/SegmentsCollectionView')
 	};
 
 	var controllers = {};
 
 	var that = this;
+
+	var SegmentsCollection;
 
 	console.log('SegmentsController')
 	console.log(App)
@@ -27,10 +32,26 @@ define( function ( require ) {
 	var SegmentsController = Marionette.Controller.extend({
 		initialize : function ( options ) {
 
-		}, 
+		},
 
-		show : function () {
-			
+		fetchCollection : function(){
+			SegmentsCollection.fetch();
+		},
+
+		show : function (region, collection) {
+			console.log(region)
+			SegmentsCollection = collection ? collection : collections.SegmentsCollection;
+			SegmentsCollection =  new SegmentsCollection();
+			console.log(new views.SegmentsCollection())
+			var segmentsCollectionView = new views.SegmentsCollection({
+				collection: SegmentsCollection
+			});
+
+			region.show(segmentsCollectionView);
+
+			console.log(SegmentsCollection)
+
+			this.fetchCollection();
 		}
 
 	});

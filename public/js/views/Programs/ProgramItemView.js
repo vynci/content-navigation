@@ -8,6 +8,7 @@ define( function ( require ) {
 
 	return Marionette.ItemView.extend( {
 		tagName: 'li',
+		className: 'cn-program',
 		'template'  : _.template( template )
 	} );
 } );
