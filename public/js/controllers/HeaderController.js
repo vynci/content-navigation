@@ -8,7 +8,6 @@ define( function ( require ) {
 	var Marionette  = require( 'marionette' );
 	var App 		= require( 'App' );
 
-	var applications = {};
 	var collections  = {};
 	var components   = {};
 	var layouts      = {};

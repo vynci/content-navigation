@@ -1,18 +1,46 @@
 define( function ( require ) {
 	'use strict';
-	var _           = require( 'underscore' );
-	var Backbone    = require( 'backbone' );
-	var Marionette  = require( 'marionette' );
+	var _ 					= require( 'underscore' );
+	var Backbone    		= require( 'backbone' );
+	var BackboneRelational 	= require( 'backbone-relational' );
+	var Marionette  		= require( 'marionette' );
 
-	var ProgramModel = Backbone.Model.extend({
-		defaults : {
-			id 			: 101,
-			title 		: 'Program title',
-			description : 'Program description',
-			subPrograms : 1,
-			segments 	: 1,
-			programImg 	: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png'
-		}
+	var SegmentModel 		= require( 'models/SegmentModel');
+	var SegmentCollection	= require( 'collections/SegmentCollection');
+
+	var ProgramModel = Backbone.RelationalModel.extend({
+		idAtrribute		: 'id',
+		relations : [{
+			type 			: Backbone.HasMany,
+			key				: 'VideoSegments',
+			keySource		: 'ContentId',
+			keyDestination 	: 'ContentId',
+			relatedModel	: SegmentModel,
+			collectionType	: SegmentCollection,
+			collectionKey 	: 'ContentId',
+			autoFetch		: true,
+			// autoFetch: {
+			// 	success: function( model, response ) {
+			// 		console.log('success')
+			// 		console.log('success')
+			// 		console.log('success')
+			// 		console.log('success')
+			// 		console.log('success')
+			// 		console.log('success')
+			// 	},
+			// 	error: function( model, response ) {
+			// 		console.log('error')
+			// 		console.log('error')
+			// 		console.log('error')
+			// 		console.log('error')
+			// 		console.log('error')
+			// 		console.log('error')
+			// 	}
+			// },
+			reverseRelation: {
+				key: 'ContentParentId'
+			}
+		}]
 	} );
 
 	return ProgramModel;

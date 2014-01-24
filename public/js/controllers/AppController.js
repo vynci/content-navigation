@@ -24,8 +24,6 @@ define( function ( require ) {
 
 	var that = this;
 
-	console.log(this);
-
 	var API = {
 
 		showHeader: function (callback) {
@@ -82,19 +80,13 @@ define( function ( require ) {
 		'initialize' : function ( options ) {
 			_.bindAll( this );
 			_.extend( this, options );
-			console.log('init')
-			console.log(this)
+
 			return this;
 		},
 
 		'showDefault' : function ( actions ) {
-			console.log('default')
-			console.log(API)
-			console.log(async)
 
 			App = this.App;
-
-			console.log(this.App)
 
 			if (!App.subControllers) {
 				async.series([

@@ -1,13 +1,13 @@
 define( function ( require ) {
 	'use strict';
-	var _           = require( 'underscore' );
-	var Backbone    = require( 'backbone' );
-	var Marionette  = require( 'marionette' );
-	var model 		= require( 'models/ProgramModel')
+	var _           	= require( 'underscore' );
+	var Backbone    	= require( 'backbone' );
+	var Marionette  	= require( 'marionette' );
+	var ProgramModel 	= require( 'models/ProgramModel');
 
-	var collection = Backbone.Collection.extend({
-		model : model,
-		url : 'testData/ProgramsAll.json'
+	var ProgramCollection = Backbone.Collection.extend({
+		model 	: ProgramModel,
+		url 	: 'testData/ProgramsAll.json'
 	} );
-	return collection;
+	return ProgramCollection;
 } );

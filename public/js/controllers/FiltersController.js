@@ -6,9 +6,8 @@ define( function ( require ) {
 	var $           = require( 'jquery' );
 	var Backbone    = require( 'backbone' );
 	var Marionette  = require( 'marionette' );
-	var App  = require( 'App' );
+	var App  		= require( 'App' );
 
-	var applications = {};
 	var collections  = {};
 	var components   = {};
 	var layouts      = {};
