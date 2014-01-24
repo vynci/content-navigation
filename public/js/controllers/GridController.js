@@ -22,19 +22,13 @@ define( function ( require ) {
 
 	var that = this;
 
-	console.log('GridController')
-	console.log(App)
-
 	var GridController = Marionette.Controller.extend({
 		initialize : function ( options ) {
 
 		}, 
-
 		show : function (region) {
 			var gridLayout = new views.GridLayout();
-
 			region.show(gridLayout);
-
 			return gridLayout;
 		}
 

@@ -22,18 +22,14 @@ define( function ( require ) {
 
 	var that = this;
 
-	console.log('HeaderController')
-	console.log(App)
-
 	var HeaderController = Marionette.Controller.extend({
 		initialize : function ( options ) {
 
 		}, 
 
 		show : function (region) {
-			console.log(region)
 			region.show(new views.HeaderLayout());
-
+			return region;
 		}
 
 	});

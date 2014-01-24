@@ -18,7 +18,10 @@ define( function () {
 			'spec/views/Filters/FilterCollectionTest',
 			'spec/views/Filters/FilterItemTest',
 			'spec/views/Grid/GridLayoutTest',
-			'spec/views/HeaderLayoutTest'
+			'spec/views/HeaderLayoutTest',
+			'spec/controllers/FiltersControllerTest',
+			'spec/controllers/GridControllerTest',
+			'spec/controllers/HeaderControllerTest'
 		 ]
 	};
 } );

@@ -18,12 +18,7 @@ define( function ( require ) {
 		'FilterLayout'	: require('views/Filters/FilterLayoutView')
 	};
 
-	var controllers = {};
-
 	var that = this;
-
-	console.log('FiltersController')
-	console.log(App)
 
 	var FiltersController = Marionette.Controller.extend({
 		initialize : function ( options ) {
@@ -32,6 +27,7 @@ define( function ( require ) {
 
 		show : function (region) {
 			region.show(new views.FilterLayout());
+			return region;
 		}
 
 	});

@@ -26,9 +26,6 @@ define( function ( require ) {
 
 	var ProgramCollection;
 
-	console.log('ProgramsController')
-	console.log(App)
-
 	var ProgramsController = Marionette.Controller.extend({
 		initialize : function ( options ) {
 
@@ -39,7 +36,6 @@ define( function ( require ) {
 		}, 
 
 		show : function (region, collection) {
-			console.log(region)
 			ProgramCollection = collection ? collection : collections.ProgramCollection;
 			ProgramCollection =  new ProgramCollection();
 			console.log(new views.ProgramCollection())
