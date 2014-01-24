@@ -7,6 +7,7 @@ define( function ( require ) {
 	var segmentItemView = require('views/Segments/SegmentItemView');
 
 	return Marionette.CollectionView.extend( {
-		itemView 	: segmentItemView
+		tagName: 'ul',
+		itemView: segmentItemView
 	} );
 } );
