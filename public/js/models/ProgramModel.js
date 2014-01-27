@@ -17,6 +17,7 @@ define(function(require) {
             programImg: 'http://builtbyhq.com/projects/respond/1/img/video-bg-3.png',
             Children: []
         },
+        
         idAttribute: 'ContentId', 
 
         relations	: [{
