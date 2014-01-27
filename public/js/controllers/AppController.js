@@ -68,7 +68,7 @@ define( function ( require ) {
 
 				subControllers.Programs = new ProgramsController();
 				subControllers.Segments = new SegmentsController();
-				console.log(views.GridContent)
+				
 			   	subControllers.Programs.show( views.GridContent.mainRegion );
 			    //subControllers.Segments.show( views.GridContent.mainRegion );
 			});
@@ -100,8 +100,6 @@ define( function ( require ) {
 			} else {
 				API.showContents( actions );
 			}
-
-
 
 		},
 

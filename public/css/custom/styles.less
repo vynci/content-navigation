@@ -18,9 +18,18 @@
 }
 .multiple-boxshadow() {
     /*temporary*/
-    -moz-box-shadow: 4px 6px 3px 0px #333, 10px 13px 3px 1px #666, 16px 20px 3px 2px #999;
-    -webkit-box-shadow: 4px 6px 3px 0px #333, 10px 13px 3px 1px #666, 16px 20px 3px 2px #999;
-    box-shadow: 4px 6px 3px 0px #333, 10px 13px 3px 1px #666, 16px 20px 3px 2px #999;
+    -moz-box-shadow: 
+        3px 3px 0px 0px #777, 
+        6px 6px 0px 0px #999, 
+        9px 9px 0px 0px #CCC;
+    -webkit-box-shadow: 
+        3px 3px 0px 0px #777, 
+        6px 6px 0px 0px #999, 
+        9px 9px 0px 0px #CCC;
+    box-shadow: 
+        3px 3px 0px 0px #777, 
+        6px 6px 0px 0px #999, 
+        9px 9px 0px 0px #CCC;
 }
 .cn-margin-breaker {
     margin-top:20px;
@@ -106,22 +115,26 @@
     /* temporary */
     ul {
         .default-li(0px);
-        overflow:auto;
-        .cn-program {
-            .multiple-boxshadow();
-        }
+        overflow:auto;        
         li {
-            .default-li(0px);
-            .border-radius(@radius: 5px);
-            /*-webkit-box-shadow: @platform-boxshadow;
-            -moz-box-shadow: @platform-boxshadow;
-            box-shadow: @platform-boxshadow;*/
-            background-color: #f7f8f9;
-            margin:0px 32px 32px 0px !important;
-            width:276px;
-            height: 300px;
-            overflow:hidden;
+            .default-li(0px);            
             float:left;
+            
+            .cn-item {
+                .multiple-boxshadow();
+
+                .border-radius(@radius: 5px);
+                /*-webkit-box-shadow: @platform-boxshadow;
+                -moz-box-shadow: @platform-boxshadow;
+                box-shadow: @platform-boxshadow;*/
+                background-color: #f7f8f9;
+                margin:0px 32px 32px 0px !important;
+                width:276px;
+                height: 300px;
+                margin: 0 10px 10px 0;
+                overflow:hidden;
+            }
+
             .cn-program-content, .cn-segment-content {
                 position: relative;
                 background: @platform-charcoal;
@@ -193,6 +206,12 @@
                 input.flag[type=checkbox]:checked ~ .cn-watchlater-icon {
                     color: @platform-green;
                 }
+            }
+
+            .cn-segment-expander {
+                background-color: #bbb;
+                clear: both;
+                padding: 10px;
             }
         }
     }

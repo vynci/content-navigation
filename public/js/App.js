@@ -44,7 +44,7 @@ define( function ( require ) {
 
 		// Router init
 		App.Router = new Router( { 'controller' : App.Controller } );
-		console.log(App);
+		
 	} );
 
 	// start history

@@ -1,59 +1,81 @@
 // ## Manages f/e logic for the application
-define( function ( require ) {
-	'use strict';
+define(function(require) {
+    'use strict';
 
-	var _           = require( 'underscore' );
-	var $           = require( 'jquery' );
-	var Backbone    = require( 'backbone' );
-	var Marionette  = require( 'marionette' );
-	var App  = require( 'App' );
+    var _ = require('underscore');
+    var $ = require('jquery');
+    var Backbone = require('backbone');
+    var Marionette = require('marionette');
+    var App = require('App');
 
-	var applications = {};
-	var collections  = {
-		'ProgramCollection'	: require( 'collections/ProgramCollection' )
-	};
-	var components   = {};
-	var layouts      = {};
-	var models       = {};
-	var views        = {
-		'ErrorView' 		: require( 'views/ErrorView' ), 
-		'ProgramCollection'	: require( 'views/Programs/ProgramsCollectionView')
-	};
+    var collections = {
+        'ProgramCollection': require('collections/ProgramCollection'),
+        'SegmentCollection': require('collections/SegmentCollection')
+    };
+    var components = {};
+    var layouts = {};
+    var models = {};
+    var views = {
+        'ErrorView': require('views/ErrorView'),
+        'ProgramCollection': require('views/Programs/ProgramsCollectionView')
+    };
 
-	var controllers = {};
+    var controllers = {};
 
-	var that = this;
+    var that = this;
 
-	var ProgramCollection;
+    var ProgramCollection;
 
-	var ProgramsController = Marionette.Controller.extend({
-		initialize : function ( options ) {
+    var ProgramsController = Marionette.Controller.extend({
+        initialize: function(options) {
 
-		}, 
+        },
 
-		fetchCollection: function () {
-			ProgramCollection.fetch();
-		}, 
+        // Call the collectionview's collection fetch
+        fetchCollection: function() {
+            ProgramCollection.fetch();
 
-		show : function (region, collection) {
-			ProgramCollection = collection ? collection : collections.ProgramCollection;
-			ProgramCollection =  new ProgramCollection();
-			console.log(new views.ProgramCollection())
-			var programCollectionView = new views.ProgramCollection({ 
-				collection: ProgramCollection
-			});
+            Window.ProgramCollection = ProgramCollection;
 
-			region.show(programCollectionView);
+            Window.SegmentCollection = new collections.SegmentCollection();
+        },
 
-			console.log(ProgramCollection)
+        showSegments: function(e) {
+        	e.preventDefault();
+            var model = this.model;
+            var segmentExpander = this.ui.segmentExpander;
+            var el = $(e.currentTarget);
+            App.subControllers.Segments.showProgramSegments(model, segmentExpander);
+        },
 
-			this.fetchCollection();
+        // Show the program collection views
+        // Params:
+        // region - the region the render the collection view
+        // collection - the collection to use for the collection view
+        show: function(region, collection) {
 
+            var that = this;
 
-		}
+            ProgramCollection = collection ? collection : collections.ProgramCollection;
+            ProgramCollection = new ProgramCollection();
 
-	});
+            var programCollectionView = new views.ProgramCollection({
+                itemViewOptions: {
+                    events: {
+                        'click div.cn-program-content': that.showSegments
+                    }
+                },
+                collection: ProgramCollection
+            });
 
-	return ProgramsController;
+            region.show(programCollectionView);
+
+            // Fetch collection models
+            this.fetchCollection();
+        }
+
+    });
+
+    return ProgramsController;
 
 });

@@ -9,7 +9,7 @@ define(function(require) {
 
     var ProgramModel 	= Backbone.AssociatedModel.extend({
         defaults: {
-            ContentId: 101,
+            ContentId: -1,
             title: 'Program title',
             description: 'Program description',
             subPrograms: 1,

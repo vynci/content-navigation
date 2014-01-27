@@ -7,7 +7,7 @@ define(function(require) {
 
     var SegmentModel = Backbone.AssociatedModel.extend({
         defaults: {
-            ContentId: 10101,
+            ContentId: -1,
             ContentParentId: 1011,
             ContentName: 'Content Name',
             ContentDescription: 'Content Description',
