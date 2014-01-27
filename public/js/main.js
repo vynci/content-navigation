@@ -27,6 +27,18 @@
 			'shim'                     : 'libs/shim', // *! utility for object prototypes
 			'MiddlewareRouter'         : 'libs/marionette-middleware-router/MiddlewareRouter', // *! custom marionette router similar to express
 
+			// Portfolio dependencies
+			'jquery-easing'				: 'libs/portfolio/jqueryjquery.easing.1.3.min',
+			'jquery-imagesloaded'		: 'libs/portfolio/jquery.imagesloaded.min',
+			'jquery-scrollTo'			: 'libs/portfolio/jquery.scrollTo-1.4.3.1-min',
+			'jquery-touchSwipe'			: 'libs/portfolio/jquery.touchSwipe.min',
+			'spin'						: 'libs/portfolio/spin.min',
+			'portfolio'					: 'libs/portfolio/portfolio',
+
+
+			// expander dependencies
+			'expander'					: 'libs/expander/grid.js',
+
 
 			// root folders
 			'models'                   : 'models',
