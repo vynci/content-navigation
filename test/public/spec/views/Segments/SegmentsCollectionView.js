@@ -7,8 +7,8 @@ define( function( require ) {
 	var async      = require( 'async' );
 
 	var View 	   = require( 'views/Segments/SegmentsCollectionView' );
-	var Model	   = require( 'models/Segment' );
-	var Collection = require( 'collections/SegmentsCollection' );
+	var Model	   = require( 'models/SegmentModel' );
+	var Collection = require( 'collections/SegmentCollection' );
 	
 
 	describe( 'Segment Collection View', function () {

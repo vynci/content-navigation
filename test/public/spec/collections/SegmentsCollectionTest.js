@@ -5,7 +5,7 @@ define( function ( require ) {
 	var Backbone   = require( 'backbone' );
 	var Marionette = require( 'marionette' );
 	var async      = require( 'async' );
-	var Collection = require( 'collections/SegmentsCollection');
+	var Collection = require( 'collections/SegmentCollection');
 
 	var segmentsCollection = new Collection();
 

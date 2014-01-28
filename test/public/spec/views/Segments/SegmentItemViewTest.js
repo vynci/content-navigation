@@ -6,7 +6,7 @@ define( function ( require ) {
 	var Marionette = require( 'marionette' );
 	var async      = require( 'async' );
 	var View 	   = require( 'views/Segments/SegmentItemView' );
-	var Model 	   = require( 'models/Segment' );
+	var Model 	   = require( 'models/SegmentModel' );
 
 	var SegmentItemView;
 	var segment;

@@ -21,7 +21,8 @@ define( function () {
 			'spec/views/HeaderLayoutTest',
 			'spec/controllers/FiltersControllerTest',
 			'spec/controllers/GridControllerTest',
-			'spec/controllers/HeaderControllerTest'
+			'spec/controllers/HeaderControllerTest',
+			'spec/controllers/SegmentsControllerTest'
 		 ]
 	};
 } );

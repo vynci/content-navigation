@@ -5,7 +5,7 @@ define( function( require ) {
 	var Backbone   = require( 'backbone' );
 	var Marionette = require( 'marionette' );
 	var async      = require( 'async' );
-	var Model	   = require( 'models/Segment' );
+	var Model	   = require( 'models/SegmentModel' );
 	var segmentModel = new Model();
 
 	describe( 'Segment Model Test', function () {

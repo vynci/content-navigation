@@ -13,6 +13,7 @@
 			// Test libs
 			'mocha'                    : '../../public/js/libs/mocha/mocha',
 			'chai'                     : '../../public/js/libs/chai/chai',
+			'sinon'					   : '../../public/js/libs/sinon/lib/sinon',
 
 			// Libraries and utility scripts
 			'jquery'                   : 'libs/jquery/jquery',
@@ -32,7 +33,7 @@
 			'porthole'                 : 'libs/porthole/porthole.min', // *! platform <--> app communication
 			'shim'                     : 'libs/shim', // *! utility for object prototypes
 			'MiddlewareRouter'         : 'libs/marionette-middleware-router/MiddlewareRouter', // *! custom marionette router similar to express
-
+            'expander'                 : 'libs/expander/grid',
 
 			// root folders
 			'models'                   : 'models',
