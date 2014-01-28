@@ -34,6 +34,8 @@
 			'shim'                     : 'libs/shim', // *! utility for object prototypes
 			'MiddlewareRouter'         : 'libs/marionette-middleware-router/MiddlewareRouter', // *! custom marionette router similar to express
             'expander'                 : 'libs/expander/grid',
+            'jquery-videoplayer'	   : 'libs/jquery.videoPlayer/jquery.invokeVideoPlayer',
+
 
 			// root folders
 			'models'                   : 'models',

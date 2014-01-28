@@ -10,7 +10,7 @@ define( function( require ) {
 
 	var controller = new Controller();
 
-	describe.only( 'Segment Controller', function () {
+	describe( 'Segment Controller', function () {
 		it( 'should be an instance', function () {
 			controller.should.be.an.instanceof( Controller );
 		} );
