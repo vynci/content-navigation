@@ -236,6 +236,9 @@
                                     div {
                                         font-size: 10px;
                                     }
+                                    .remove{
+                                        display:none;
+                                    }
                                 }
                                 .cn-watchlater-icon:hover {
                                     color: @platform-green;
@@ -247,6 +250,12 @@
                                 }
                                 input.flag[type=checkbox]:checked ~ .cn-watchlater-icon {
                                     color: @platform-green;
+                                    .add{
+                                        display:none;
+                                    }
+                                    .remove{
+                                        display:block;
+                                    }
                                 }
                             }
                         }
@@ -270,7 +279,7 @@
     text-align: center;
     opacity: 0;
     z-index: 999;
-    padding: 8px 5px;
+    padding: 2px 5px;
     position: absolute;
     cursor: default;
     -webkit-transition: all 240ms ease-in-out;
