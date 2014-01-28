@@ -117,7 +117,7 @@ define( function ( require ) {
 			var segmentsCollectionView = new views.SegmentsCollectionView({
 				itemViewOptions: {
 					events: {
-						'click ': that.invokeVideoPlayer
+						'click .cn-segment-content': that.invokeVideoPlayer
 					}
 				},
 				collection: collection
