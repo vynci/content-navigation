@@ -26,6 +26,7 @@
 			'porthole'                 : 'libs/porthole/src/porthole.min', // *! platform <--> app communication
 			'shim'                     : 'libs/shim', // *! utility for object prototypes
 			'MiddlewareRouter'         : 'libs/marionette-middleware-router/MiddlewareRouter', // *! custom marionette router similar to express
+			'jquery-videoplayer'	   : 'libs/jquery.videoPlayer/jquery.invokeVideoPlayer',
 
 			// Portfolio dependencies
 			'jquery-easing'				: 'libs/portfolio/jqueryjquery.easing.1.3.min',
@@ -56,6 +57,9 @@
 		'shim' : {
 			'bootstrap' : {
 				'deps' : [ 'jquery' ]
+			},
+			'jquery-videoplayer': {
+				'deps' : ['jquery', 'underscore']
 			},
 			'deps' : [ 'jquery', 'underscore' ]
 		}

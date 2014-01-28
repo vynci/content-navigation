@@ -8,6 +8,8 @@ define( function ( require ) {
 	var Marionette  = require( 'marionette' );
 	var App  		= require( 'App' );
 
+	var VideoPlayerInvoker = require('jquery-videoplayer');
+
 	var async  		= require( 'async' );
 
 	var collections  = {
@@ -95,11 +97,29 @@ define( function ( require ) {
 			}
 		},
 
+		invokeVideoPlayer: function (event, model) {
+			//var model = this.model;
+			event.preventDefault();
+			//console.log(this.model);
+			//VideoPlayerInvoker.invoke(this.el, 'http://www.youtube.com/embed/9g8_-LoCdKI');
+			//console.log(VideoPlayerInvoker)
+			//VideoPlayerInvoker.test();
+			invokeVideoPlayer(event.currentTarget, this.model.get('VideoURL'))
+
+		},
+
 		renderProgramSegments: function (programModel, el) {
+
+			var that = this;
 
 			var collection = programModel.get('Children');
 			
 			var segmentsCollectionView = new views.SegmentsCollectionView({
+				itemViewOptions: {
+					events: {
+						'click ': that.invokeVideoPlayer
+					}
+				},
 				collection: collection
 			});			
 

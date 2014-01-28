@@ -6,7 +6,20 @@
  @plaform-padding: 9px;
  @platform-font:'Avenir LT W01 65 Medium', 'AvenirLTW01-65MediumObl', 'Avenir LT W01 85 Heavy', 'AvenirLTW01-85HeavyObli', 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
  @platform-boxshadow: 1px 1px rgba(32, 37, 35, .2);
- .default-li(@mp: 0px) {
+@videoPlayerOverlayBg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gEVBwgX8AJAqAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADUlEQVQI12NgYGCoBwAAhACAxkwJbwAAAABJRU5ErkJggg==');
+@videoPlayerCloseButtonBg: url("data:image/gif;base64,R0lGODlhFAAUAJEAAE1NTf///////wAAACH5BAEHAAIALAAAAAAUABQAAAIzBISpK+YMm5Enpodw1HlCfnkKOIqU1VXk55goVb2hi7Y0q95lfG70uurNaqLgTviyyUoFADs=") no-repeat scroll center center rgba(150, 150, 150, 100);
+
+.zeroTopLeft {
+    top: 0;
+    left: 0;
+}
+
+.fullWidthHeight {
+    width: 100%;
+    height: 100%;
+}
+
+.default-li(@mp: 0px) {
     padding: @mp;
     margin:@mp;
     list-style:none;
@@ -340,4 +353,70 @@
 input.flag[type=checkbox] {
     position: absolute;
     left: -999em;
+}
+
+.cn-segment-video {
+    border: none;
+    height: 300px;
+    padding: 10px;
+    cursor: pointer;
+    .cn-segment-video-content {
+        .fullWidthHeight;
+        .cn-segment-video-thumbnail {
+            .fullWidthHeight;
+            padding: 5px;
+        }
+    }
+}
+
+.cn-presentation-overlay {
+    background: @videoPlayerOverlayBg;
+    position: absolute;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .zeroTopLeft;
+
+    .cn-video-content {
+        /*padding: 15px;*/
+        position: absolute;
+    }
+
+    .cn-video-player-container {
+        background: #000000;
+        float: left;
+        .fullWidthHeight;
+        
+        iframe {
+            .fullWidthHeight;
+            .zeroTopLeft;
+            margin: 0px auto auto auto;
+            display: none;
+        }
+
+        img {
+            .fullWidthHeight;
+        }
+
+    }
+
+    .cn-video-player-sidebar {
+        background: #FFFFFF;
+        float: right;
+        display: none;
+    
+        .cn-video-content-close-button {
+            height: 20px;
+            width: 20px;
+            padding: 5px;
+            background: @videoPlayerCloseButtonBg;
+            float: right;
+            cursor: pointer;
+        }
+
+        .cn-video-content-close-button:hover {
+            opacity: 0.9;
+        }
+
+    }
+    
 }
