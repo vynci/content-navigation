@@ -27,7 +27,12 @@ define(function(require) {
 
     var that = this;
 
-    var ProgramCollection;
+    var Program = {
+    	collection: null,
+    	view: null
+    };
+
+    var Grid;
 
     var ProgramsController = Marionette.Controller.extend({
         initialize: function(options) {
@@ -36,16 +41,14 @@ define(function(require) {
 
         // Call the collectionview's collection fetch
         fetchCollection: function(callback) {
-            ProgramCollection.fetch({
-                success: function () {
-                    callback(null)
-                },
-                error: function (error) {
-                    callback(error);
-                }
+            Program.collection.fetch({
+            	success: function () {
+            		callback(null);
+            	}, 
+            	error: function () {
+            		callback(error);
+            	}
             });
-
-            Window.ProgramCollection = ProgramCollection;
 
             Window.SegmentCollection = new collections.SegmentCollection();
         },
@@ -53,9 +56,8 @@ define(function(require) {
         showSegments: function(e) {
         	e.preventDefault();
             var model = this.model;
-            var segmentExpander = this.ui.segmentExpander;
             var el = $(e.currentTarget);
-            App.subControllers.Segments.showProgramSegments(model, segmentExpander);
+            App.subControllers.Segments.showProgramSegments(model, Program.view.el);
         },
 
         // Show the program collection views
@@ -66,26 +68,28 @@ define(function(require) {
 
             var that = this;
 
-            ProgramCollection = collection ? collection : collections.ProgramCollection;
-            ProgramCollection = new ProgramCollection();
+            var ProgramCollection = collection ? collection : collections.ProgramCollection;
+            Program.collection = new ProgramCollection();
 
-            var programCollectionView = new views.ProgramCollection({
+            Program.view = new views.ProgramCollection({
                 itemViewOptions: {
                     events: {
                         'click div.cn-program-content': that.showSegments
                     }
                 },
-                collection: ProgramCollection
+                collection: Program.collection
             });
 
-            region.show(programCollectionView);
-            //console.log(expander)
+            region.show(Program.view);
+
             // Fetch collection models
             async.series([
-                this.fetchCollection,
-                //expander.init
+            	this.fetchCollection,
+            	function () {
+            		Grid = expander.Grid();
+            		Grid.init();
+            	}
             ]);
-
         }
 
     });

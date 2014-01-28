@@ -121,8 +121,8 @@
         .default-li(0px);
         overflow:auto;
         li {
-            .default-li(0px);
-            float:left;
+            .default-li(0px);            
+            display: inline-block;
             .cn-item {
                 .multiple-boxshadow();
                 .border-radius(@radius: 5px);
@@ -171,10 +171,10 @@
                     }
                 }
             }
-            .cn-segment-expander {
+            .cn-expander {
+                overflow:auto;                
                 ul {
-                    .default-li(0px);
-                    overflow:auto;
+                    .default-li(0px);                    
                     li {
                         .default-li(0px);
                         float:left;

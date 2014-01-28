@@ -85,8 +85,7 @@ define( function ( require ) {
 				});
 
 			} else {
-
-				this.showHideProgramSegments();
+				this.renderProgramSegments(programModel, el)
 
 			}			
 		},
@@ -125,9 +124,7 @@ define( function ( require ) {
 
 			segmentsCollectionView.render();
 
-			$(el).hide();
-			
-			$(el).html(segmentsCollectionView.el);
+			$(el).find('.cn-segments').html(segmentsCollectionView.el);
 
 			this.setClickedProgram(programModel, el, segmentsCollectionView);
 
@@ -138,8 +135,8 @@ define( function ( require ) {
 		},
 
 		showHideProgramSegments: function () {
-			var el = this.getClickedProgram().el;
-			$(el).toggle('slow');
+			// var el = this.getClickedProgram().el;
+			// $(el).toggle('slow');
 		}, 
 
 		show : function () {

@@ -1,4 +1,4 @@
-(function() {
+define(function () {
     /*
      * debouncedresize: special jQuery event that happens once after a window resize
      *
@@ -165,10 +165,10 @@
         return deferred ? deferred.promise($this) : $this;
     };
 
-    var Grid = (function() {
+    var Grid = function() {
 
         // list of items
-        var $grid = $('#og-grid'),
+        var $grid = $('ul.cn-programs'),
             // the items
             $items = $grid.children('li'),
             // current expanded item's index
@@ -197,12 +197,11 @@
             // default settings
             settings = {
                 minHeight: 300,
-                speed: 350,
+                speed: 400,
                 easing: 'ease'
             };
 
         function init(config) {
-
             // the settings..
             settings = $.extend(true, {}, settings, config);
 
@@ -253,7 +252,6 @@
         }
 
         function initEvents() {
-
             // when clicking an item, show the preview with the item´s info and large image.
             // close the item if already expanded.
             // also close if clicking on the item´s cross
@@ -278,16 +276,14 @@
         }
 
         function initItemsEvents($items) {
-            $items.on('click', 'span.og-close', function() {
+
+            $items.on('click', 'span.cn-close', function(e) {
                 hidePreview();
                 return false;
-            }).children('a').on('click', function(e) {
-
-                var $item = $(this).parent();
+            }).find('div.cn-program-content a').on('click', function(e) {
+                var $item = $(this).parent().parent().parent();
                 // check if item already opened
                 current === $item.index() ? hidePreview() : showPreview($item);
-                return false;
-
             });
         }
 
@@ -356,13 +352,13 @@
                 this.$title = $('<h3></h3>');
                 this.$description = $('<p></p>');
                 this.$href = $('<a href="#">Visit website</a>');
-                this.$details = $('<div class="og-details"></div>').append(this.$title, this.$description, this.$href);
-                this.$loading = $('<div class="og-loading"></div>');
-                this.$fullimage = $('<div class="og-fullimg"></div>').append(this.$loading);
+                this.$details = $('<div class="cn-details"></div>').append(this.$title, this.$description, this.$href);
+                this.$loading = $('<div class="cn-loading"></div>');
+                this.$fullimage = $('<div class="cn-fullimg"></div>').append(this.$loading);
                 this.$segments = $('<div class="cn-segments"></div>');
-                this.$closePreview = $('<span class="og-close"></span>');
-                this.$previewInner = $('<div class="og-expander-inner"></div>').append(this.$closePreview, this.$segments);
-                this.$previewEl = $('<div class="og-expander"></div>').append(this.$previewInner);
+                this.$closePreview = $('<span class="cn-close"></span>');
+                this.$previewInner = $('<div class="cn-expander-inner"></div>').append(this.$closePreview, this.$segments);
+                this.$previewEl = $('<div class="cn-expander"></div>').append(this.$previewInner);
                 // append preview element to the item
                 this.$item.append(this.getEl());
                 // set the transitions for the preview and the item
@@ -376,11 +372,11 @@
                     this.$item = $item;
                 }
 
-                // if already expanded remove class "og-expanded" from current item and add it to new item
+                // if already expanded remove class "cn-expanded" from current item and add it to new item
                 if (current !== -1) {
                     var $currentItem = $items.eq(current);
-                    $currentItem.removeClass('og-expanded');
-                    this.$item.addClass('og-expanded');
+                    $currentItem.removeClass('cn-expanded');
+                    this.$item.addClass('cn-expanded');
                     // position the preview correctly
                     this.positionPreview();
                 }
@@ -401,7 +397,7 @@
                 this.$title.html(eldata.title);
                 this.$description.html(eldata.description);
                 this.$href.attr('href', eldata.href);
-                this.$segments.html(eldata.segments);
+                
 
                 var self = this;
 
@@ -443,7 +439,7 @@
                         if (support) {
                             $(this).off(transEndEventName);
                         }
-                        self.$item.removeClass('og-expanded');
+                        self.$item.removeClass('cn-expanded');
                         self.$previewEl.remove();
                     };
 
@@ -487,12 +483,12 @@
                         if (support) {
                             self.$item.off(transEndEventName);
                         }
-                        self.$item.addClass('og-expanded');
+                        self.$item.addClass('cn-expanded');
                     };
 
                 this.calcHeight();
                 this.$previewEl.css('height', '300px');
-                this.$item.css('height', '560px').on(transEndEventName, onEndFn);
+                this.$item.css('height', '680px').on(transEndEventName, onEndFn);
 
                 if (!support) {
                     onEndFn.call();
@@ -515,7 +511,7 @@
 
             },
             setTransition: function() {
-                this.$previewEl.css('transition', 'height ' + settings.speed + 'ms ' + settings.easing);
+                this.$previewEl.css('transition', 'height ' + (settings.speed-150) + 'ms ' + settings.easing);
                 this.$item.css('transition', 'height ' + settings.speed + 'ms ' + settings.easing);
             },
             getEl: function() {
@@ -528,7 +524,12 @@
             addItems: addItems
         };
 
-    })();
+    };
 
-    return Grid;
-})();
+    return {
+    	Grid: function () {
+    		return Grid();
+    	}
+    };
+
+}());
