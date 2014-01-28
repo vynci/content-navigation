@@ -18,18 +18,9 @@
 }
 .multiple-boxshadow() {
     /*temporary*/
-    -moz-box-shadow: 
-        3px 3px 0px 0px #777, 
-        6px 6px 0px 0px #999, 
-        9px 9px 0px 0px #CCC;
-    -webkit-box-shadow: 
-        3px 3px 0px 0px #777, 
-        6px 6px 0px 0px #999, 
-        9px 9px 0px 0px #CCC;
-    box-shadow: 
-        3px 3px 0px 0px #777, 
-        6px 6px 0px 0px #999, 
-        9px 9px 0px 0px #CCC;
+    -moz-box-shadow: 3px 3px 0px 0px #777, 6px 6px 0px 0px #999, 9px 9px 0px 0px #CCC;
+    -webkit-box-shadow: 3px 3px 0px 0px #777, 6px 6px 0px 0px #999, 9px 9px 0px 0px #CCC;
+    box-shadow: 3px 3px 0px 0px #777, 6px 6px 0px 0px #999, 9px 9px 0px 0px #CCC;
 }
 .cn-margin-breaker {
     margin-top:20px;
@@ -115,14 +106,12 @@
     /* temporary */
     ul {
         .default-li(0px);
-        overflow:auto;        
+        overflow:auto;
         li {
-            .default-li(0px);            
+            .default-li(0px);
             float:left;
-            
             .cn-item {
                 .multiple-boxshadow();
-
                 .border-radius(@radius: 5px);
                 /*-webkit-box-shadow: @platform-boxshadow;
                 -moz-box-shadow: @platform-boxshadow;
@@ -133,82 +122,136 @@
                 height: 300px;
                 margin: 0 10px 10px 0;
                 overflow:hidden;
-            }
-
-            .cn-program-content, .cn-segment-content {
-                position: relative;
-                background: @platform-charcoal;
-                a.cn-playnow-icon {
-                    display:none;
-                    position:absolute;
-                    top: 60px;
-                    left: 130px;
-                    font-size: 36px;
-                    text-decoration: none;
-                    color: @platform-white;
-                }
-                p {
-                    display:none;
-                    position:absolute;
-                    top: 100px;
-                    left: 105px;
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: @platform-white;
-                }
-            }
-            .cn-program-content:hover, .cn-segment-content:hover {
-                a.cn-playnow-icon {
-                    display: block;
-                }
-                p {
-                    display: block;
-                }
-                img {
-                    opacity: 0.5;
-                    transition-duration: 0.5s;
-                }
-            }
-            .cn-program-details, .cn-segment-details {
-                padding:15px 10px 24px 15px;
-                h3 {
-                    font-size: 16px;
-                    line-height: 24px;
-                    font-weight: 300;
-                    font-style: @platform-font;
-                }
-                p {
-                    font-size: 14px;
-                    line-height: 28px;
-                    font-weight: normal;
-                    color: #8a8d94;
-                    font-style: @platform-font;
-                }
-                .cn-watchlater-icon {
-                    float: right;
-                    margin-right: 30px;
-                    font-size: 25px;
-                    text-decoration: none;
-                    color: @platform-gray;
-                    position:relative;
-                    div {
-                        font-size: 12px;
+                .cn-program-content {
+                    position: relative;
+                    background: @platform-charcoal;
+                    p {
+                        display:none;
+                        position:absolute;
+                        top: 100px;
+                        left: 105px;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: @platform-white;
                     }
                 }
-                .cn-watchlater-icon:hover {
-                    color: @platform-green;
+                .cn-program-content:hover {
+                    img {
+                        opacity: 0.5;
+                        transition-duration: 0.5s;
+                    }
                 }
-                .cn-watchlater-icon {
-                    cursor: pointer;
-                    user-select: none;
-                    color: @platform-gray;
-                }
-                input.flag[type=checkbox]:checked ~ .cn-watchlater-icon {
-                    color: @platform-green;
+                .cn-program-details {
+                    padding:15px 10px 24px 15px;
+                    h3 {
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 300;
+                        font-style: @platform-font;
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 28px;
+                        font-weight: normal;
+                        color: #8a8d94;
+                        font-style: @platform-font;
+                    }
                 }
             }
-
             .cn-segment-expander {
+                ul {
+                    .default-li(0px);
+                    overflow:auto;
+                    li {
+                        .default-li(0px);
+                        float:left;
+                        .cn-segment {
+                            .border-radius(@radius: 5px);
+                            /*-webkit-box-shadow: @platform-boxshadow;
+                            -moz-box-shadow: @platform-boxshadow;
+                            box-shadow: @platform-boxshadow;*/
+                            background-color: #f7f8f9;
+                            margin:0px 32px 32px 0px !important;
+                            width:276px;
+                            height: 300px;
+                            margin: 0 10px 10px 0;
+                            overflow:hidden;
+                            .cn-segment-content {
+                                position: relative;
+                                background: @platform-charcoal;
+                                a.cn-playnow-icon {
+                                    display:none;
+                                    position:absolute;
+                                    top: 50px;
+                                    left: 130px;
+                                    font-size: 36px;
+                                    text-decoration: none;
+                                    color: @platform-white;
+                                }
+                                p {
+                                    display:none;
+                                    position:absolute;
+                                    top: 80px;
+                                    left: 105px;
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                    color: @platform-white;
+                                }
+                            }
+                            .cn-segment-content:hover {
+                                a.cn-playnow-icon {
+                                    display: block;
+                                }
+                                p {
+                                    display: block;
+                                }
+                                img {
+                                    opacity: 0.5;
+                                    transition-duration: 0.5s;
+                                }
+                            }
+                            .cn-segment-details {
+                                padding:15px 10px 24px 15px;
+                                h3 {
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    font-weight: 300;
+                                    font-style: @platform-font;
+                                }
+                                p {
+                                    font-size: 14px;
+                                    line-height: 28px;
+                                    font-weight: normal;
+                                    color: #8a8d94;
+                                    font-style: @platform-font;
+                                }
+                                .cn-watchlater-icon {
+                                    float: right;
+                                    margin-right: 20px;
+                                    margin-top: 10px;
+                                    font-size: 25px;
+                                    text-decoration: none;
+                                    color: @platform-gray;
+                                    position:relative;
+                                    div {
+                                        font-size: 10px;
+                                    }
+                                }
+                                .cn-watchlater-icon:hover {
+                                    color: @platform-green;
+                                }
+                                .cn-watchlater-icon {
+                                    cursor: pointer;
+                                    user-select: none;
+                                    color: @platform-gray;
+                                }
+                                input.flag[type=checkbox]:checked ~ .cn-watchlater-icon {
+                                    color: @platform-green;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

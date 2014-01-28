@@ -37,7 +37,7 @@
 
 
 			// expander dependencies
-			'expander'					: 'libs/expander/grid.js',
+			'expander'					: 'libs/expander/grid',
 
 
 			// root folders

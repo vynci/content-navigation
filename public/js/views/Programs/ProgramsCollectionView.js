@@ -8,6 +8,7 @@ define( function ( require ) {
 
 	return Marionette.CollectionView.extend( {
 		tagName: 'ul',
+		className: 'cn-programs',
 		itemView 	: programItemView
 	} );
 } );

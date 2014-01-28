@@ -7,6 +7,9 @@ define(function(require) {
     var Backbone = require('backbone');
     var Marionette = require('marionette');
     var App = require('App');
+    var async = require('async');
+
+    var expander = require('expander');
 
     var collections = {
         'ProgramCollection': require('collections/ProgramCollection'),
@@ -32,8 +35,15 @@ define(function(require) {
         },
 
         // Call the collectionview's collection fetch
-        fetchCollection: function() {
-            ProgramCollection.fetch();
+        fetchCollection: function(callback) {
+            ProgramCollection.fetch({
+                success: function () {
+                    callback(null)
+                },
+                error: function (error) {
+                    callback(error);
+                }
+            });
 
             Window.ProgramCollection = ProgramCollection;
 
@@ -69,9 +79,13 @@ define(function(require) {
             });
 
             region.show(programCollectionView);
-
+            //console.log(expander)
             // Fetch collection models
-            this.fetchCollection();
+            async.series([
+                this.fetchCollection,
+                //expander.init
+            ]);
+
         }
 
     });
