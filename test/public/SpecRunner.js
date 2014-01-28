@@ -22,13 +22,14 @@
 			'marionette'               : 'libs/backbone.marionette/lib/core/amd/backbone.marionette',
 			'backbone.babysitter'      : 'libs/backbone.babysitter/lib/amd/backbone.babysitter',
 			'backbone.wreqr'           : 'libs/backbone.wreqr/lib/amd/backbone.wreqr',
+			'backbone-associations'	   : 'libs/backbone-associations/backbone-associations',
 			'text'                     : 'libs/requirejs-text/text',
 			'async'                    : 'libs/async/lib/async',
 			'jquery-cookie'            : 'libs/jquery.cookie/jquery.cookie',
 			'modernizr'                : 'libs/modernizr/modernizr',
 			'fine-uploader'            : 'libs/fine-uploader/build/jquery.fineuploader',
 			'base64'                   : 'libs/base64', // *! utility to encode/decode
-			'porthole'                 : 'libs/porthole/src/porthole.min', // *! platform <--> app communication
+			'porthole'                 : 'libs/porthole/porthole.min', // *! platform <--> app communication
 			'shim'                     : 'libs/shim', // *! utility for object prototypes
 			'MiddlewareRouter'         : 'libs/marionette-middleware-router/MiddlewareRouter', // *! custom marionette router similar to express
 
