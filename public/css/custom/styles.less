@@ -180,22 +180,28 @@
             .cn-expander {
                 overflow-x:scroll;
                 overflow-y:hidden;
+                background-color: #545966;
                 ul {
                     .default-li(0px);
                     li {
                         .default-li(0px);
                         display: inline-block;
                         .cn-segment {
+
+                            background-color: #656975;
+
                             .border-radius(@radius: 5px);
-                            /*-webkit-box-shadow: @platform-boxshadow;
-                            -moz-box-shadow: @platform-boxshadow;
-                            box-shadow: @platform-boxshadow;*/
-                            background-color: #f7f8f9;
+                            -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+                            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+
                             margin:0px 32px 32px 0px !important;
                             width:276px;
                             height: 300px;
                             margin: 0 10px 10px 0;
+
                             overflow:hidden;
+                            
                             .cn-segment-content {
                                 position: relative;
                                 background: @platform-charcoal;
@@ -231,24 +237,22 @@
                                 }
                             }
                             .cn-segment-details {
+                                color: #fff;
                                 padding:15px 10px 24px 15px;
                                 h3 {
                                     font-size: 16px;
                                     line-height: 24px;
-                                    font-weight: 300;
+                                    font-weight: 300;                                    
                                     font-style: @platform-font;
                                 }
                                 p {
-                                    font-size: 14px;
-                                    line-height: 28px;
+                                    font-size: 12px;
                                     font-weight: normal;
-                                    color: #8a8d94;
                                     font-style: @platform-font;
                                 }
                                 .cn-watchlater-icon {
                                     float: right;
-                                    margin-right: 20px;
-                                    margin-top: 10px;
+                                    margin: 20px 15px 0 0;
                                     font-size: 25px;
                                     text-decoration: none;
                                     color: @platform-gray;

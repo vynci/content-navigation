@@ -30,7 +30,7 @@ define(function(require) {
         initialize: function () {
         	var that = this;
             this.get('Children').url = function(){
-                return 'testData/Segments_SubProgram_10101_Program_101.json?' + that.id ;
+                return 'testData/Segments_SubProgram_10101_Program_'+that.id +'.json?';
             }
         }
     });    
