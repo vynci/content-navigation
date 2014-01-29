@@ -1,24 +1,21 @@
 @platform-gray: #E1E1E1;
-@platform-blue: #1BB7E9;
-@platform-green: #79CE57;
-@platform-charcoal: #333333;
-@platform-white: #ffffff;
-@plaform-padding: 9px;
-@platform-font:'Avenir LT W01 65 Medium', 'AvenirLTW01-65MediumObl', 'Avenir LT W01 85 Heavy', 'AvenirLTW01-85HeavyObli', 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
-@platform-boxshadow: 1px 1px rgba(32, 37, 35, .2);
-@videoPlayerOverlayBg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gEVBwgX8AJAqAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADUlEQVQI12NgYGCoBwAAhACAxkwJbwAAAABJRU5ErkJggg==');
-@videoPlayerCloseButtonBg: url("data:image/gif;base64,R0lGODlhFAAUAJEAAE1NTf///////wAAACH5BAEHAAIALAAAAAAUABQAAAIzBISpK+YMm5Enpodw1HlCfnkKOIqU1VXk55goVb2hi7Y0q95lfG70uurNaqLgTviyyUoFADs=") no-repeat scroll center center rgba(150, 150, 150, 100);
-
-.zeroTopLeft {
+ @platform-blue: #1BB7E9;
+ @platform-green: #79CE57;
+ @platform-charcoal: #333333;
+ @platform-white: #ffffff;
+ @plaform-padding: 9px;
+ @platform-font:'Avenir LT W01 65 Medium', 'AvenirLTW01-65MediumObl', 'Avenir LT W01 85 Heavy', 'AvenirLTW01-85HeavyObli', 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
+ @platform-boxshadow: 1px 1px rgba(32, 37, 35, .2);
+ @videoPlayerOverlayBg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gEVBwgX8AJAqAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADUlEQVQI12NgYGCoBwAAhACAxkwJbwAAAABJRU5ErkJggg==');
+ @videoPlayerCloseButtonBg: url("data:image/gif;base64,R0lGODlhFAAUAJEAAE1NTf///////wAAACH5BAEHAAIALAAAAAAUABQAAAIzBISpK+YMm5Enpodw1HlCfnkKOIqU1VXk55goVb2hi7Y0q95lfG70uurNaqLgTviyyUoFADs=") no-repeat scroll center center rgba(150, 150, 150, 100);
+ .zeroTopLeft {
     top: 0;
     left: 0;
 }
-
 .fullWidthHeight {
     width: 100%;
     height: 100%;
 }
-
 .default-li(@mp: 0px) {
     padding: @mp;
     margin:@mp;
@@ -52,11 +49,9 @@
         }
     }
 }
-
 .cn-middle-content {
     width:100%;
 }
-
 .cn-sidebar-content {
     max-width: 22%;
     /* temporary */
@@ -178,107 +173,104 @@
                 }
             }
             .cn-expander {
-                overflow-x:scroll;
-                overflow-y:hidden;
-                background-color: #545966;
-                ul {
-                    .default-li(0px);
-                    li {
-                        .default-li(0px);
-                        display: inline-block;
-                        .cn-segment {
-
-                            background-color: #656975;
-
-                            .border-radius(@radius: 5px);
-                            -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
-                            -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
-                            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
-
-                            margin:0px 32px 32px 0px !important;
-                            width:276px;
-                            height: 300px;
-                            margin: 0 10px 10px 0;
-
-                            overflow:hidden;
-                            
-                            .cn-segment-content {
-                                position: relative;
-                                background: @platform-charcoal;
-                                a.cn-playnow-icon {
-                                    display:none;
-                                    position:absolute;
-                                    top: 50px;
-                                    left: 130px;
-                                    font-size: 36px;
-                                    text-decoration: none;
-                                    color: @platform-white;
-                                }
-                                p {
-                                    display:none;
-                                    position:absolute;
-                                    top: 80px;
-                                    left: 105px;
-                                    font-size: 18px;
-                                    line-height: 24px;
-                                    color: @platform-white;
-                                }
-                            }
-                            .cn-segment-content:hover {
-                                a.cn-playnow-icon {
-                                    display: block;
-                                }
-                                p {
-                                    display: block;
-                                }
-                                img {
-                                    opacity: 0.5;
-                                    transition-duration: 0.5s;
-                                }
-                            }
-                            .cn-segment-details {
-                                color: #fff;
-                                padding:15px 10px 24px 15px;
-                                h3 {
-                                    font-size: 16px;
-                                    line-height: 24px;
-                                    font-weight: 300;                                    
-                                    font-style: @platform-font;
-                                }
-                                p {
-                                    font-size: 12px;
-                                    font-weight: normal;
-                                    font-style: @platform-font;
-                                }
-                                .cn-watchlater-icon {
-                                    float: right;
-                                    margin: 20px 15px 0 0;
-                                    font-size: 25px;
-                                    text-decoration: none;
-                                    color: @platform-gray;
-                                    position:relative;
-                                    div {
-                                        font-size: 10px;
+                .cn-expander-inner {
+                    .cn-segments {
+                        background-color: #545966;
+                        ul {
+                            .default-li(0px);
+                            li {
+                                .default-li(0px);
+                                display: inline-block;
+                                .cn-segment {
+                                    background-color: #656975;
+                                    .border-radius(@radius: 5px);
+                                    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+                                    -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+                                    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+                                    margin:0px 32px 32px 0px !important;
+                                    width:276px;
+                                    height: 300px;
+                                    margin: 0 10px 10px 0;
+                                    overflow:hidden;
+                                    .cn-segment-content {
+                                        position: relative;
+                                        background: @platform-charcoal;
+                                        a.cn-playnow-icon {
+                                            display:none;
+                                            position:absolute;
+                                            top: 50px;
+                                            left: 130px;
+                                            font-size: 36px;
+                                            text-decoration: none;
+                                            color: @platform-white;
+                                        }
+                                        p {
+                                            display:none;
+                                            position:absolute;
+                                            top: 80px;
+                                            left: 105px;
+                                            font-size: 18px;
+                                            line-height: 24px;
+                                            color: @platform-white;
+                                        }
                                     }
-                                    .remove{
-                                        display:none;
+                                    .cn-segment-content:hover {
+                                        a.cn-playnow-icon {
+                                            display: block;
+                                        }
+                                        p {
+                                            display: block;
+                                        }
+                                        img {
+                                            opacity: 0.5;
+                                            transition-duration: 0.5s;
+                                        }
                                     }
-                                }
-                                .cn-watchlater-icon:hover {
-                                    color: @platform-green;
-                                }
-                                .cn-watchlater-icon {
-                                    cursor: pointer;
-                                    user-select: none;
-                                    color: @platform-gray;
-                                }
-                                input.flag[type=checkbox]:checked ~ .cn-watchlater-icon {
-                                    color: @platform-green;
-                                    .add{
-                                        display:none;
-                                    }
-                                    .remove{
-                                        display:block;
+                                    .cn-segment-details {
+                                        color: #fff;
+                                        padding:15px 10px 24px 15px;
+                                        h3 {
+                                            font-size: 16px;
+                                            line-height: 24px;
+                                            font-weight: 300;
+                                            font-style: @platform-font;
+                                        }
+                                        p {
+                                            font-size: 12px;
+                                            font-weight: normal;
+                                            font-style: @platform-font;
+                                        }
+                                        .cn-watchlater-icon {
+                                            float: right;
+                                            margin: 20px 15px 0 0;
+                                            font-size: 25px;
+                                            text-decoration: none;
+                                            color: @platform-gray;
+                                            position:relative;
+                                            div {
+                                                font-size: 10px;
+                                            }
+                                            .remove {
+                                                display:none;
+                                            }
+                                        }
+                                        .cn-watchlater-icon:hover {
+                                            color: @platform-green;
+                                        }
+                                        .cn-watchlater-icon {
+                                            cursor: pointer;
+                                            user-select: none;
+                                            color: @platform-gray;
+                                        }
+                                        input.flag[type=checkbox]:checked ~ .cn-watchlater-icon {
+                                            color: @platform-green;
+                                            .add {
+                                                display:none;
+                                            }
+                                            .remove {
+                                                display:block;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -303,7 +295,7 @@
     text-align: center;
     opacity: 0;
     z-index: 999;
-    padding: 2px 5px;
+    padding: 5px 5px;
     position: absolute;
     cursor: default;
     -webkit-transition: all 240ms ease-in-out;
@@ -331,7 +323,7 @@
 /* default heights, width and margin w/o Javscript */
  .tool-tip, .tool-tip.top {
     width: 80px;
-    height: 22px;
+    height: 30px;
     margin-left: -43px;
 }
 /* on hover of element containing tooltip default*/
@@ -365,7 +357,6 @@ input.flag[type=checkbox] {
     position: absolute;
     left: -999em;
 }
-
 .cn-segment-video {
     border: none;
     height: 300px;
@@ -379,42 +370,34 @@ input.flag[type=checkbox] {
         }
     }
 }
-
 .cn-presentation-overlay {
     background: @videoPlayerOverlayBg;
     position: absolute;
     overflow-x: scroll;
     overflow-y: hidden;
     .zeroTopLeft;
-
     .cn-video-content {
         /*padding: 15px;*/
         position: absolute;
     }
-
     .cn-video-player-container {
         background: #000000;
         float: left;
         .fullWidthHeight;
-
         iframe {
             .fullWidthHeight;
             .zeroTopLeft;
             margin: 0px auto auto auto;
             display: none;
         }
-
         img {
             .fullWidthHeight;
         }
-
     }
-
     .cn-video-player-sidebar {
         background: #FFFFFF;
         float: right;
         display: none;
-
         .cn-video-content-close-button {
             height: 20px;
             width: 20px;
@@ -423,11 +406,8 @@ input.flag[type=checkbox] {
             float: right;
             cursor: pointer;
         }
-
         .cn-video-content-close-button:hover {
             opacity: 0.9;
         }
-
     }
-
 }

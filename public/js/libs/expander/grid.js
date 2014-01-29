@@ -490,6 +490,10 @@ define(function () {
                 this.$previewEl.css('height', '360px');
                 this.$item.css('height', '695px').on(transEndEventName, onEndFn);
 
+                var width = ($items.length - 4) * 315;
+                $('.cn-segments').css('width', width + 'px');
+                $('.cn-close').css('left', (width - 20) + 'px');
+
                 if (!support) {
                     onEndFn.call();
                 }
