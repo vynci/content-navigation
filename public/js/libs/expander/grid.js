@@ -397,7 +397,7 @@ define(function () {
                 this.$title.html(eldata.title);
                 this.$description.html(eldata.description);
                 this.$href.attr('href', eldata.href);
-                
+
 
                 var self = this;
 
@@ -487,8 +487,8 @@ define(function () {
                     };
 
                 this.calcHeight();
-                this.$previewEl.css('height', '300px');
-                this.$item.css('height', '680px').on(transEndEventName, onEndFn);
+                this.$previewEl.css('height', '360px');
+                this.$item.css('height', '695px').on(transEndEventName, onEndFn);
 
                 if (!support) {
                     onEndFn.call();

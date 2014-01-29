@@ -1,11 +1,11 @@
 @platform-gray: #E1E1E1;
- @platform-blue: #1BB7E9;
- @platform-green: #79CE57;
- @platform-charcoal: #333333;
- @platform-white: #ffffff;
- @plaform-padding: 9px;
- @platform-font:'Avenir LT W01 65 Medium', 'AvenirLTW01-65MediumObl', 'Avenir LT W01 85 Heavy', 'AvenirLTW01-85HeavyObli', 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
- @platform-boxshadow: 1px 1px rgba(32, 37, 35, .2);
+@platform-blue: #1BB7E9;
+@platform-green: #79CE57;
+@platform-charcoal: #333333;
+@platform-white: #ffffff;
+@plaform-padding: 9px;
+@platform-font:'Avenir LT W01 65 Medium', 'AvenirLTW01-65MediumObl', 'Avenir LT W01 85 Heavy', 'AvenirLTW01-85HeavyObli', 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
+@platform-boxshadow: 1px 1px rgba(32, 37, 35, .2);
 @videoPlayerOverlayBg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gEVBwgX8AJAqAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADUlEQVQI12NgYGCoBwAAhACAxkwJbwAAAABJRU5ErkJggg==');
 @videoPlayerCloseButtonBg: url("data:image/gif;base64,R0lGODlhFAAUAJEAAE1NTf///////wAAACH5BAEHAAIALAAAAAAUABQAAAIzBISpK+YMm5Enpodw1HlCfnkKOIqU1VXk55goVb2hi7Y0q95lfG70uurNaqLgTviyyUoFADs=") no-repeat scroll center center rgba(150, 150, 150, 100);
 
@@ -121,7 +121,7 @@
         .default-li(0px);
         overflow:auto;
         li {
-            .default-li(0px);            
+            .default-li(0px);
             display: inline-block;
             .cn-item {
                 .multiple-boxshadow();
@@ -172,12 +172,13 @@
                 }
             }
             .cn-expander {
-                overflow:auto;                
+                overflow-x:scroll;
+                overflow-y:hidden;
                 ul {
-                    .default-li(0px);                    
+                    .default-li(0px);
                     li {
                         .default-li(0px);
-                        float:left;
+                        display: inline-block;
                         .cn-segment {
                             .border-radius(@radius: 5px);
                             /*-webkit-box-shadow: @platform-boxshadow;
@@ -385,7 +386,7 @@ input.flag[type=checkbox] {
         background: #000000;
         float: left;
         .fullWidthHeight;
-        
+
         iframe {
             .fullWidthHeight;
             .zeroTopLeft;
@@ -403,7 +404,7 @@ input.flag[type=checkbox] {
         background: #FFFFFF;
         float: right;
         display: none;
-    
+
         .cn-video-content-close-button {
             height: 20px;
             width: 20px;
@@ -418,5 +419,5 @@ input.flag[type=checkbox] {
         }
 
     }
-    
+
 }
