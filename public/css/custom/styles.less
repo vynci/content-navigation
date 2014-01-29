@@ -39,7 +39,7 @@
     margin-top:20px;
 }
 .cn-content {
-    max-width: 1200px !important;
+    max-width: 1232px !important;
     /*temporary use only*/
 }
 .cn-header-content {
@@ -52,11 +52,17 @@
         }
     }
 }
+
+.cn-middle-content {
+    width:100%;
+}
+
 .cn-sidebar-content {
-    width: 260px;
+    max-width: 22%;
     /* temporary */
     margin-right:32px;
     .cn-filter {
+        width:260px;
         .cn-header-filter {
             border-top: solid 1px @platform-charcoal;
             background : @platform-gray;
@@ -115,7 +121,7 @@
     }
 }
 .cn-main-content {
-    width:630px;
+    max-width:75%;
     /* temporary */
     ul {
         .default-li(0px);
